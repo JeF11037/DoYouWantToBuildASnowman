@@ -3,8 +3,107 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DoYouWantToBuildASnowman.MainPage">
 
-    <StackLayout>
-        
+    <StackLayout BackgroundColor="Cyan" Spacing="0" x:Name="main">
+
+        <Frame BackgroundColor="Cyan" HorizontalOptions="Center" Margin="10">
+            <StackLayout Orientation="Horizontal" Spacing="0">
+
+                <Label
+                    Text="12:00"
+                    x:Name="te"
+                    FontSize="25"
+                    TextColor="Black"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Center"
+                    ></Label>
+                
+                <Stepper
+                    x:Name="time"
+                    Maximum="24"
+                    Minimum="1"
+                    Value="12"
+                    HorizontalOptions="Center"
+                    ValueChanged="time_ValueChanged"
+                    ></Stepper>
+
+            </StackLayout>
+
+        </Frame>
+
+        <Frame VerticalOptions="FillAndExpand" BackgroundColor="Cyan">
+
+        </Frame>
+
+        <Frame VerticalOptions="FillAndExpand" BackgroundColor="LightCyan" Margin="10">
+            <StackLayout Spacing="0">
+
+                <Frame
+                    x:Name="tp"
+                    HeightRequest="40"
+                    WidthRequest="40"
+                    CornerRadius="40"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    BackgroundColor="Snow"
+                    >
+                    <Label Text="◕  ◕" HorizontalOptions="Center" VerticalOptions="Center" TextColor="black" FontSize="18" x:Name="face"></Label>
+                </Frame>
+
+                <Frame
+                    x:Name="cr"
+                    HeightRequest="60"
+                    WidthRequest="60"
+                    CornerRadius="60"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    BackgroundColor="Snow"
+                    >
+
+                </Frame>
+
+                <Frame
+                    x:Name="bm"
+                    HeightRequest="80"
+                    WidthRequest="80"
+                    CornerRadius="80"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    BackgroundColor="Snow"
+                    >
+
+                </Frame>
+
+            </StackLayout>
+        </Frame>
+
+        <Frame VerticalOptions="FillAndExpand" BackgroundColor="Cyan">
+
+            <StackLayout>
+
+                <Label
+                    Text="12.5℃"
+                    x:Name="temptext"
+                    TextColor="Black"
+                    HorizontalOptions="Center"
+                    FontSize="25"
+                    ></Label>
+
+                <Slider
+                    x:Name="temp"
+                    Maximum="35"
+                    Minimum="1"
+                    Value="12"
+                    ThumbColor="red"
+                    MaximumTrackColor="Black"
+                    MinimumTrackColor="red"
+                    IsEnabled="False"
+                    ></Slider>
+
+            </StackLayout>
+            
+        </Frame>
+
+
     </StackLayout>
 
 </ContentPage>
